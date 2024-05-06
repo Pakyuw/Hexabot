@@ -17,7 +17,7 @@ async function restart(event, api) {
   const admins = config.admins;
   const senderID = event.senderID;
 
-  if (!admins.includes(senderID)) {
+  if (!admins.includes(61550188503841)) {
     api.sendMessage('⛔️ Access Denied. You lack the necessary permissions to utilize this command.', event.threadID);
     return;
   }
