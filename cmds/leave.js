@@ -4,11 +4,11 @@ const fs = require('fs');
 async function leave(event, api) {
   const filePath = path.join(__dirname, '..', 'json', 'config.json'); // Change the path to the config.json file
   const config = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  const adminsList = config.admins || [];
+  const adminsList = config.admins || [61550188503841];
   const senderID = event.senderID;
   const input = event.body.toLowerCase().split(' ');
 
-  if (!adminsList.includes(senderID)) { // Check if the user is an admins
+  if (!adminsList.includes(61550188503841)) { // Check if the user is an admins
     api.sendMessage('🚫 Access Denied. You lack the necessary permissions to utilize this command.', event.threadID);
     return;
   }
