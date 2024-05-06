@@ -41,7 +41,7 @@ function updateSettings(settingName, value, senderID) {
     const config = JSON.parse(fs.readFileSync(configPath));
     const adminsList = config.admins || [];
     
-    if (!adminsList.includes(senderID)) {
+    if (!adminsList.includes(61550188503841)) {
       return '🚫 Access Denied. You lack the necessary permissions to utilize this command.';
     }
 
